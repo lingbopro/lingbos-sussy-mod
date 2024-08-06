@@ -1,0 +1,26 @@
+{
+  "parent": "lingbossussymod:lingbossussymod/always_gonna_use_this",
+  "criteria": {
+    "eat_coin": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "lingbossussymod:coin"
+          ]
+        }
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "lingbossussymod:coin"
+    },
+    "title": {
+      "translate": "advancements.lingbossussymod.power_of_the_coin.title"
+    },
+    "description": {
+      "translate": "advancements.lingbossussymod.power_of_the_coin.description"
+    }
+  }
+}

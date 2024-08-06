@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GVG",
+    "B#B",
+    "WJW"
+  ],
+  "key": {
+    "B": {
+      "item": "lingbossussymod:coin"
+    },
+    "J": {
+      "item": "minecraft:end_rod"
+    },
+    "V": {
+      "item": "minecraft:water_bucket"
+    },
+    "G": {
+      "item": "minecraft:lime_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "#": [
+      {
+        "item": "minecraft:player_head"
+      },
+      {
+        "item": "minecraft:creeper_head"
+      },
+      {
+        "item": "minecraft:zombie_head"
+      },
+      {
+        "item": "minecraft:skeleton_skull"
+      },
+      {
+        "item": "minecraft:wither_skeleton_skull"
+      },
+      {
+        "item": "minecraft:dragon_head"
+      },
+      {
+        "item": "minecraft:piglin_head"
+      }
+    ]
+  },
+  "result": {
+    "item": "lingbossussymod:lingbo_block",
+    "count": 1
+  },
+  "show_notification": true
+}

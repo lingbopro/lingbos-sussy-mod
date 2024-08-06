@@ -1,0 +1,28 @@
+{
+  "parent": "lingbossussymod:lingbossussymod/always_gonna_use_this",
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lingbossussymod:dislike"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "lingbossussymod:dislike"
+    },
+    "title": {
+      "translate": "advancements.lingbossussymod.never_gonna_use_this.title"
+    },
+    "description": {
+      "translate": "advancements.lingbossussymod.never_gonna_use_this.description"
+    }
+  }
+}

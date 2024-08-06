@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "get_something": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {}
+    },
+    "consumed_something": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {}
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "lingbossussymod:textures/block/lingbo_block.png",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "lingbossussymod:lingbo_block"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.lingbossussymod.root.title"
+    },
+    "description": {
+      "translate": "advancements.lingbossussymod.root.description"
+    }
+  }
+}

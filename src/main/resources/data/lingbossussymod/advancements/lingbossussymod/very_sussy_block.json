@@ -1,0 +1,28 @@
+{
+  "parent": "lingbossussymod:lingbossussymod/root",
+  "criteria": {
+    "get_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lingbossussymod:lingbo_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "lingbossussymod:lingbo_block"
+    },
+    "title": {
+      "translate": "advancements.lingbossussymod.very_sussy_block.title"
+    },
+    "description": {
+      "translate": "advancements.lingbossussymod.very_sussy_block.description"
+    }
+  }
+}
