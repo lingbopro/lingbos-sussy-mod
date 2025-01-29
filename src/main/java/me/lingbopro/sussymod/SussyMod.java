@@ -125,15 +125,6 @@ public class SussyMod {
             // 一些客户端启动代码
             LOGGER.info("[LINGBO'S SUSSY MOD] Client Setup");
             LOGGER.info("[LINGBO'S SUSSY MOD] MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            Player player = Minecraft.getInstance().player;
-            if (player != null) {
-                player.sendSystemMessage(Component.translatable("text.lingbossussymod.clientHello").withStyle(ChatFormatting.AQUA).withStyle(ChatFormatting.BOLD));
-                player.sendSystemMessage(Component.translatable("text.lingbossussymod.platform.bilibili").append(": ").withStyle(ChatFormatting.DARK_PURPLE)
-                        .append(Component.translatable("text.lingbossussymod.url.bilibili").withStyle(ChatFormatting.DARK_BLUE)));
-                player.sendSystemMessage(Component.translatable("text.lingbossussymod.platform.github").append(": ").withStyle(ChatFormatting.DARK_PURPLE)
-                        .append(Component.translatable("text.lingbossussymod.url.github").withStyle(ChatFormatting.DARK_BLUE)));
-                player.sendSystemMessage(Component.translatable("text.lingbossussymod.enjoy").withStyle(ChatFormatting.GOLD));
-            }
         }
     }
 }
