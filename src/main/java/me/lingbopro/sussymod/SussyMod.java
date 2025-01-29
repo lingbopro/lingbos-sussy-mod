@@ -37,6 +37,9 @@ import org.slf4j.Logger;
 public class SussyMod {
     // 定义 Mod ID
     public static final String MODID = "lingbossussymod";
+
+    SharedVariables sharedVariables = SharedVariables.getInstance();
+
     // 创建 Deferred Register 用于注册方块、物品、创造模式标签页
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
@@ -77,6 +80,8 @@ public class SussyMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public SussyMod() {
+        sharedVariables.setLogger(LOGGER);
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // 注册 commonSetup 方法用于 Mod 加载
