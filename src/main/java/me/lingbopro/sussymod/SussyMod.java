@@ -41,6 +41,7 @@ public class SussyMod {
         BlockItems.register(modEventBus);
         Items.register(modEventBus);
         CreativeTabs.register(modEventBus);
+        Enchantments.register(modEventBus);
 
         // 在服务器注册
         MinecraftForge.EVENT_BUS.register(this);
