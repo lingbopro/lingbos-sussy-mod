@@ -24,7 +24,7 @@ public class FlyUpEnchantment extends Enchantment implements IForgeEnchantment {
             // 让实体飞起来！
             target.setDeltaMovement(0, yMovement, 0);
             // 物品冷却
-            ((Player) attacker).getCooldowns().addCooldown(attacker.getUseItem().getItem(), 5);
+            ((Player) attacker).getCooldowns().addCooldown(attacker.getUseItem().getItem(), 30);
         }
     }
 
