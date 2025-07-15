@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "lingbossussymod"
+version = "${version}"
+displayName = "Lingbo's Sussy Mod"
+authors = "lingbopro"
+description = '''
+A small mod with some sussy ideas.
+'''
+#logoFile = ""
+
+[[dependencies.lingbossussymod]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.lingbossussymod]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.lingbossussymod]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "lingbossussymod.mixins.json"
