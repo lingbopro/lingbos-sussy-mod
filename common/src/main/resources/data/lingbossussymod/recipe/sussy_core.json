@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R#R",
+    "#I#",
+    " W "
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:lime_dye"
+      },
+      {
+        "item": "minecraft:green_dye"
+      }
+    ],
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "I": [
+      {
+        "item": "minecraft:iron_ingot"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "item": "minecraft:gold_ingot"
+      }
+    ],
+    "W": [
+      {
+        "item": "minecraft:water_bucket"
+      },
+      {
+        "item": "minecraft:milk_bucket"
+      },
+      {
+        "item": "minecraft:bucket"
+      }
+    ]
+  },
+  "result": {
+    "id": "lingbossussymod:sussy_core",
+    "count": 4
+  }
+}

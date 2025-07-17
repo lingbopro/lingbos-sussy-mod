@@ -9,7 +9,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 import static me.lingbopro.lingbossussymod.SussyMod.MOD_ID;
-import static net.minecraft.world.item.Items.COMMAND_BLOCK;
 
 /**
  * 创造模式标签页注册项
@@ -21,7 +20,7 @@ public class CreativeTabs {
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("lingbos_sussy_mod",
             () -> CreativeTabRegistry.create(
                     Component.translatable("itemGroup.lingbos_sussy_mod"),
-                    () -> new ItemStack(COMMAND_BLOCK) // replace this when we have an icon item
+                    () -> new ItemStack(Items.SUSSY_CORE)
             ));
     //</editor-fold>
 
