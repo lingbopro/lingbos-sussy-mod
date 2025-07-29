@@ -1,12 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "R#R",
-    "#I#",
-    " W "
+    " I ",
+    "IRI",
+    " # "
   ],
   "key": {
     "#": [
+      {
+        "item": "minecraft:lime_wool"
+      },
+      {
+        "item": "minecraft:green_wool"
+      },
       {
         "item": "minecraft:lime_dye"
       },
@@ -26,17 +32,6 @@
       },
       {
         "item": "minecraft:gold_ingot"
-      }
-    ],
-    "W": [
-      {
-        "item": "minecraft:water_bucket"
-      },
-      {
-        "item": "minecraft:milk_bucket"
-      },
-      {
-        "item": "minecraft:bucket"
       }
     ]
   },
