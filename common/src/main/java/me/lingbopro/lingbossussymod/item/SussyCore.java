@@ -7,11 +7,9 @@ import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 
-import static me.lingbopro.lingbossussymod.registry.CreativeTabs.TAB;
-
 public class SussyCore extends Item {
     public SussyCore() {
-        this(new Properties().arch$tab(TAB));
+        this(new Properties());
     }
     public SussyCore(Properties p) {
         super(p);
