@@ -7,7 +7,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 
 import static me.lingbopro.lingbossussymod.SussyMod.MOD_ID;
 
@@ -19,14 +18,9 @@ public class CreativeTabs {
 
     //<editor-fold desc="Tabs">
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("lingbos_sussy_mod",
-            () -> CreativeTabRegistry.create(builder -> {
-                        builder.title(Component.translatable("itemGroup.lingbos_sussy_mod"));
-                        builder.icon(() -> new ItemStack(Items.SUSSY_CORE));
-                        builder.displayItems((parameters, output) -> {
-                            output.accept((ItemLike) Items.SUSSY_CORE);
-                            output.accept((ItemLike) Items.COIN);
-                        });
-                    }
+            () -> CreativeTabRegistry.create(
+                    Component.translatable("itemGroup.lingbos_sussy_mod"),
+                    () -> new ItemStack(Items.SUSSY_CORE)
             ));
     //</editor-fold>
 

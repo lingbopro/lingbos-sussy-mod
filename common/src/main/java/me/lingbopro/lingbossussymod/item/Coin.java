@@ -10,14 +10,17 @@ import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 
+import static me.lingbopro.lingbossussymod.registry.CreativeTabs.TAB;
+
 public class Coin extends Item {
     public Coin() {
         this(new Properties().food(new FoodProperties.Builder()
-                .alwaysEdible().nutrition(2).saturationModifier(0.5f)
-                .effect(new MobEffectInstance(MobEffects.REGENERATION, 150, 0), 1.0F)
-                .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 0), 0.8F)
-                .effect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 0), 0.5F)
-                .build())
+                        .alwaysEdible().nutrition(2).saturationModifier(0.5f)
+                        .effect(new MobEffectInstance(MobEffects.REGENERATION, 150, 0), 1.0F)
+                        .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 0), 0.8F)
+                        .effect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 0), 0.5F)
+                        .build())
+                .arch$tab(TAB)
         );
     }
 
