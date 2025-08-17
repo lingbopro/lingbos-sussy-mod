@@ -2,7 +2,9 @@ package me.lingbopro.lingbossussymod;
 
 import com.mojang.logging.LogUtils;
 import me.lingbopro.lingbossussymod.registry.CreativeTabs;
+import me.lingbopro.lingbossussymod.registry.Enchantments;
 import me.lingbopro.lingbossussymod.registry.Items;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 public final class SussyMod {
@@ -16,6 +18,11 @@ public final class SussyMod {
 
         // 注册项目
         Items.register();
+        Enchantments.register();
         CreativeTabs.register();
+    }
+
+    public static ResourceLocation resource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }

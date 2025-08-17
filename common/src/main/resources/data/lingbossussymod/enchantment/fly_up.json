@@ -1,0 +1,23 @@
+{
+  "description": {
+    "translate": "enchantment.lingbossussymod.fly_up"
+  },
+  "supported_items": "#minecraft:enchantable/weapon",
+  "weight": 2,
+  "max_level": 6,
+  "max_cost": {
+    "base": 45,
+    "per_level_above_first": 9
+  },
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 8
+  },
+  "anvil_cost": 4,
+  "slots": [
+    "hand"
+  ],
+  "_effects": {
+    "lingbossussymod:fly_up": {}
+  }
+}

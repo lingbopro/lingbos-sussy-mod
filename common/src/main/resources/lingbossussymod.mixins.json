@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "enchantment.WeaponEnchantmentMixin"
   ],
   "injectors": {
     "defaultRequire": 1
