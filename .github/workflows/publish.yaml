@@ -1,0 +1,67 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      dryRun:
+        description: 'Dry run'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+  generate-changelog:
+    name: Generate Changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Extract version from gradle.properties
+        id: extract_version
+        run: echo "version=$(grep "^mod_version=" gradle.properties | cut -d'=' -f2) >> $GITHUB_ENV"
+      - name: Generate changelog
+        run: node scripts/generate-changelog.mjs > cl.md
+        env:
+          VER: ${{ steps.extract_version.outputs.version }}
+      - run: cat cl.md
+      - name: Upload changelog
+        uses: actions/upload-artifact@v3
+        with:
+          name: changelog
+          path: cl.md
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download fabric build
+        uses: actions/download-artifact@v5
+        with:
+          name: build-fabric
+      - name: Download neoforge build
+        uses: actions/download-artifact@v5
+        with:
+          name: build-neoforge
+      - name: Download changelog
+        uses: actions/download-artifact@v5
+        with:
+          name: changelog
+      - run: tree .
+      - name: Publish!!!
+        uses: Kira-NT/mc-publish@v3.3
+        if: ${{ ! inputs.dryRun }}
+        with:
+          modrinth-id: lingbos-sussy-mod
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          curseforge-id: 1328974
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          github-token: ${{ github.token }}
+
+          files: |
+            lingbos-sussy-mod-*.jar
+          changelog-file: cl.md
