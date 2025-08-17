@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Extract version from gradle.properties
         id: extract_version
-        run: echo "version=$(grep "^mod_version=" gradle.properties | cut -d'=' -f2) >> $GITHUB_ENV"
+        run: echo "version=$(grep "^mod_version=" gradle.properties | cut -d'=' -f2)" >> $GITHUB_OUTPUT
       - name: Generate changelog
         run: node scripts/generate-changelog.mjs > cl.md
         env:
